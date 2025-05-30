@@ -1,6 +1,7 @@
 ﻿
 using OOPS.src.Abstraction;
 using OOPS.src.Encapsulation;
+using OOPS.src.Inheritance;
 
 
 // Encapsulation
@@ -19,9 +20,12 @@ using OOPS.src.Encapsulation;
 // Console.WriteLine(bankAccount.GetBalance());
 
 // Abstraction
-EmailService emailService = new EmailService();
-emailService.SendEmail();
+// EmailService emailService = new EmailService();
+// emailService.SendEmail();
 
+var car = new Car("Toyota", "Allion", 2005, 4, 4);
+car.Start();
+car.Stop();
 
 
 
