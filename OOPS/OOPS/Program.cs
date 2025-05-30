@@ -1,5 +1,6 @@
 ﻿
 using OOPS.src.Abstraction;
+using OOPS.src.Coupling;
 using OOPS.src.Encapsulation;
 // using OOPS.src.Inheritance;
 using OOPS.src.Polymorphism;
@@ -35,22 +36,29 @@ using OOPS.src.Polymorphism;
 // car.Stop();
 
 
-List<Vehicle> vehicles = new List<Vehicle>
-{
-    new Bike("Yamaha", "FZ", 2015, true),
-    new Car("Honda", "Civic", 2010, 4, 5)
-};
+// List<Vehicle> vehicles = new List<Vehicle>
+// {
+//     new Bike("Yamaha", "FZ", 2015, true),
+//     new Car("Honda", "Civic", 2010, 4, 5)
+// };
 
-foreach (var vehicle in vehicles)
-{
-    vehicle.Start();
-    
-    if(vehicle is Bike bike)
-    {
-        bike.RingBell();
-    }
-}
+// foreach (var vehicle in vehicles)
+// {
+//     vehicle.Start();
 
+//     if(vehicle is Bike bike)
+//     {
+//         bike.RingBell();
+//     }
+// }
+
+
+// Coupling
+var order1 = new Order(new EmailSender());
+order1.PlaceOrder();
+
+var order2 = new Order(new SmsSender());
+order2.PlaceOrder();
 
 
 
