@@ -1,0 +1,82 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-specific files
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+*.tlog
+*.cache
+*.pdb
+*.dbmdl
+*.mdb
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userprefs
+
+## Mono Auto Generated Files
+mono_crash.*
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+## Visual Studio Code
+.history/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuspec
+
+# Ignore test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+
+# Ignore Azure Pipelines
+.azure-pipelines/
+
+# Rider (JetBrains)
+.idea/
+*.sln.iml
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Node (if using React/Blazor Hybrid or other integrations)
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+package-lock.json
