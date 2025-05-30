@@ -1,7 +1,8 @@
 ﻿
 using OOPS.src.Abstraction;
 using OOPS.src.Encapsulation;
-using OOPS.src.Inheritance;
+// using OOPS.src.Inheritance;
+using OOPS.src.Polymorphism;
 
 
 // Encapsulation
@@ -23,9 +24,34 @@ using OOPS.src.Inheritance;
 // EmailService emailService = new EmailService();
 // emailService.SendEmail();
 
-var car = new Car("Toyota", "Allion", 2005, 4, 4);
-car.Start();
-car.Stop();
+//Inheritance
+// var car = new Car("Toyota", "Allion", 2005, 4, 4);
+// car.Start();
+// car.Stop();
+
+//Polymorphism
+// Car car = new Car("Toyota", "Allion", 2005, 4, 4);
+// car.Start();
+// car.Stop();
+
+
+List<Vehicle> vehicles = new List<Vehicle>
+{
+    new Bike("Yamaha", "FZ", 2015, true),
+    new Car("Honda", "Civic", 2010, 4, 5)
+};
+
+foreach (var vehicle in vehicles)
+{
+    vehicle.Start();
+    
+    if(vehicle is Bike bike)
+    {
+        bike.RingBell();
+    }
+}
+
+
 
 
 
