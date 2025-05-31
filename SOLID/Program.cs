@@ -76,21 +76,40 @@ expected from the base class.
 // Console.WriteLine($"Area of Circle: {circle.Area()}");
 // Console.WriteLine($"Volume of Circle: {circle.Volume()}"); // This will throw an exception  
 
-using SOLID.ISP.SOLUTION;
+// using SOLID.ISP.SOLUTION;
 
-var circle = new Circle()
-{
-    Radius = 5
-};
-Console.WriteLine($"Area of Circle: {circle.Area()}");
+// var circle = new Circle()
+// {
+//     Radius = 5
+// };
+// Console.WriteLine($"Area of Circle: {circle.Area()}");
 
-var sphere = new Sphere()
-{
-    Radius = 4
-};
-Console.WriteLine($"Area of Square: {sphere.Area()}");
-Console.WriteLine($"Volume of Sphere: {sphere.Volume()}");
+// var sphere = new Sphere()
+// {
+//     Radius = 4
+// };
+// Console.WriteLine($"Area of Square: {sphere.Area()}");
+// Console.WriteLine($"Volume of Sphere: {sphere.Volume()}");
 
+
+// DIP - Dependency Inversion Principle
+/*
+*High-level modules should not depend on low-level modules. Both should depend on abstractions.
+*Abstractions should not depend on details. Details should depend on abstractions.
+*This principle helps in reducing the coupling between high-level and low-level modules, 
+making the code more flexible and easier to maintain.
+*/
+
+// using SOLID.DIP.PROBLEM;
+
+// var car = new Car();
+// car.Start();
+
+using SOLID.DIP.SOLUTION;
+
+// var car = new Car(new Engine());
+var car = new Car(new ElectricEngine()); // Using a different engine type
+car.Start();
 
 
 
