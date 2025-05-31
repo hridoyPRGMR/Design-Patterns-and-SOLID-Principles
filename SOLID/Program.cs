@@ -4,7 +4,7 @@ A class should have only one reason to change, meaning it should only have one j
 This principle helps in reducing the complexity of the code and makes it easier to maintain.
 */
 
-using SOLID.SRP.SOLUTION;
+// using SOLID.SRP.SOLUTION;
 
 // Shape shape = new Rectangle
 // {
@@ -25,3 +25,44 @@ using SOLID.SRP.SOLUTION;
 // {
 //     Console.WriteLine($"Area of the {s.GetType().Name}: {s.CalculateArea()}");
 // }
+
+//LSP - Liskov Substitution Principle
+/*
+*Objects in a program should be replaceable with instances of their subtypes without 
+altering the correctness of the program.
+*This means that subclasses should behave in such a way that they do not break the functionality
+expected from the base class.
+*/
+
+// using SOLID.LSP.PROBLEM;
+
+// // var rect = new Rectangle();
+// var rect = new Square(); // Using Square which is a subclass of Rectangle
+// rect.Height = 10;
+// rect.Width = 5;
+// Console.WriteLine("Expected area of rectangle: 10 * 5 = 50");
+// Console.WriteLine($"Actual area of rectangle: {rect.Area}");
+
+using SOLID.LSP.SOLUTION;
+
+Shape rect = new Rectangle
+{
+    Width = 5,
+    Height = 10
+};
+Console.WriteLine("Expected area of rectangle: 5 * 10 = 50");
+Console.WriteLine($"Actual area of rectangle: {rect.Area}");
+
+Shape square = new Square
+{
+    SideLength = 5
+};
+Console.WriteLine("Expected area of square: 5 * 5 = 25");
+Console.WriteLine($"Actual area of square: {square.Area}");
+
+
+
+
+
+
+
