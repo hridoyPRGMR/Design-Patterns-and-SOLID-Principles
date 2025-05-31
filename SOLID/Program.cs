@@ -43,23 +43,53 @@ expected from the base class.
 // Console.WriteLine("Expected area of rectangle: 10 * 5 = 50");
 // Console.WriteLine($"Actual area of rectangle: {rect.Area}");
 
-using SOLID.LSP.SOLUTION;
+// using SOLID.LSP.SOLUTION;
 
-Shape rect = new Rectangle
+// Shape rect = new Rectangle
+// {
+//     Width = 5,
+//     Height = 10
+// };
+// Console.WriteLine("Expected area of rectangle: 5 * 10 = 50");
+// Console.WriteLine($"Actual area of rectangle: {rect.Area}");
+
+// Shape square = new Square
+// {
+//     SideLength = 5
+// };
+// Console.WriteLine("Expected area of square: 5 * 5 = 25");
+// Console.WriteLine($"Actual area of square: {square.Area}");
+
+
+// ISP - Interface Segregation Principle
+/*
+*Clients should not be forced to depend on interfaces they do not use.
+*This principle encourages the creation of smaller, more specific interfaces rather than a large, general-purpose interface.
+*/
+
+// using SOLID.ISP.PROBLEM;
+
+// var circle = new Circle()
+// {
+//     Radius = 5
+// };
+// Console.WriteLine($"Area of Circle: {circle.Area()}");
+// Console.WriteLine($"Volume of Circle: {circle.Volume()}"); // This will throw an exception  
+
+using SOLID.ISP.SOLUTION;
+
+var circle = new Circle()
 {
-    Width = 5,
-    Height = 10
+    Radius = 5
 };
-Console.WriteLine("Expected area of rectangle: 5 * 10 = 50");
-Console.WriteLine($"Actual area of rectangle: {rect.Area}");
+Console.WriteLine($"Area of Circle: {circle.Area()}");
 
-Shape square = new Square
+var sphere = new Sphere()
 {
-    SideLength = 5
+    Radius = 4
 };
-Console.WriteLine("Expected area of square: 5 * 5 = 25");
-Console.WriteLine($"Actual area of square: {square.Area}");
-
+Console.WriteLine($"Area of Square: {sphere.Area()}");
+Console.WriteLine($"Volume of Sphere: {sphere.Volume()}");
 
 
 
